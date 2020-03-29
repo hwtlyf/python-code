@@ -37,8 +37,8 @@ class TwoSum(object):
 				else:
 					num_sub = num_target - nums_list[i]
 					if num_sub in nums_list[i+1:] and num_sub != nums_list[i]:
-						num_value.append(nums_list[i])
-						num_value.append(num_sub)
+						num_value.append(i)
+						num_value.append(nums_list.index(num_sub))
 						return num_value
 		else:
 			return "no list!"
@@ -51,4 +51,4 @@ if __name__ == '__main__':
 	#print(ts.two_sum_n(10,[2]))
 	#print(ts.two_sum_n(10,[2,7,11,8]))
 	#print(ts.two_sum_n(10,[2,7,11,10]))
-	print(ts.two_sum_n(4,[2,7,2,10]))
+	print(ts.two_sum_n(12,[2,7,2,10]))
