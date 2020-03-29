@@ -4,7 +4,7 @@
 
 """
 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
-你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
+你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。# 同样的元素不能被重复利用指？
 示例:
 给定 nums = [2, 7, 11, 15], target = 9
 因为 nums[0] + nums[1] = 2 + 7 = 9
@@ -30,11 +30,9 @@ class TwoSum(object):
 	#o(n)
 	def two_sum_n(self, num_target, nums_list):
 		num_value = []
-		
 		if nums_list != None:
 			for i in range(len(nums_list)):
-				
-				if (i == len(nums_list) - 1) == True:
+				if (i == len(nums_list) - 1):
 					return "no solution here!"
 				else:
 					num_sub = num_target - nums_list[i]
@@ -42,15 +40,15 @@ class TwoSum(object):
 						num_value.append(nums_list[i])
 						num_value.append(num_sub)
 						return num_value
-
-		return "no solution here!"
+		else:
+			return "no list!"
 
 if __name__ == '__main__':
 	ts = TwoSum()
-	print ts.two_sum_n(9,[3,11,7,15])
-	print ts.two_sum_n(10,[2,7,11,15])
-	print ts.two_sum_n(10,None)
-	print ts.two_sum_n(10,[2])
-	print ts.two_sum_n(10,[2,7,11,8])
-	print ts.two_sum_n(10,[2,7,11,10])
-	print ts.two_sum_n(4,[2,7,2,10])
+	#print(ts.two_sum_n(9,[3,11,7,15]))
+	#print(ts.two_sum_n(10,[2,7,11,15]))
+	print(ts.two_sum_n(10,None))
+	#print(ts.two_sum_n(10,[2]))
+	#print(ts.two_sum_n(10,[2,7,11,8]))
+	#print(ts.two_sum_n(10,[2,7,11,10]))
+	print(ts.two_sum_n(4,[2,7,2,10]))
