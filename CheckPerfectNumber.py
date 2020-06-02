@@ -1,3 +1,7 @@
+#!/usr/bin/python 
+# coding: utf-8
+# @author: @monkeyrp
+
 import os
 import sys
 import math
